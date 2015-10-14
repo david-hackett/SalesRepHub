@@ -233,6 +233,36 @@
 		}
 	});
 
+    
+    cardsViewModel = kendo.data.ObservableObject.extend({
+        cardsDataSource: null,
+
+        init: function () {
+            var that = this,
+                dataSource,
+                jsonUrlToLoad;
+
+            kendo.data.ObservableObject.fn.init.apply(that, []);
+
+            //When you build for Apache Cordova 3.0.0, apply this code instead of using relative URLs. In Apache Cordova 3.0.0, relative URLs might not work properly.
+            //jsonUrlToLoad = app.makeUrlAbsolute("data/weather.json");
+            jsonUrlToLoad = "data/customer.json";
+
+            dataSource = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: jsonUrlToLoad,
+                        dataType: "json"
+                    }
+                },
+               
+            });
+
+            that.set("cardsDataSource", dataSource);
+        }
+    });
+    
+    /*
 	cardsViewModel = kendo.observable({
 		cards : [],
 		_cardNumbers: {},
@@ -272,6 +302,7 @@
             
 		}
 	});
+    */
 	
     storesListViewModel = kendo.observable({ 
         stores : [], 
@@ -286,7 +317,7 @@
 		rewardsViewModel: new RewardsViewModel(),
 		addCardViewModel: new AddCardViewModel(),
 		announcementViewModel: announcementViewModel,
-		cardsViewModel: cardsViewModel,
+		cardsViewModel: new cardsViewModel(),
         storesListViewModel: storesListViewModel
 	});
     

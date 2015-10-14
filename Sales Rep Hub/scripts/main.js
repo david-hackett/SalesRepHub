@@ -154,11 +154,11 @@ function onDeviceReady() {
 		init: function() {
 			announcementViewModel.load(_appData.getAnnouncements());
             
-            if (window.localStorage.getItem("cards") === null) {
-				localStorage.setItem("cards", _appData.getInitialCards());
-			}
+            //if (window.localStorage.getItem("cards") === null) {
+			//	localStorage.setItem("cards", _appData.getInitialCards());
+			//}
             
-            cardsViewModel.loadFromLocalStorage();
+            //cardsViewModel.loadFromLocalStorage();
 		},
         
 		onAddCardViewShow: function () {
