@@ -136,7 +136,7 @@ form:after {
 	top: 0;
 	z-index: -2;
 }
-#content form { margin: 0 20px; position: relative }
+#content form { border: 3px solid rgba(0,0,0,0.3); position: relative;  background-color: #83A5D3; }
 #content form input[type="text"],
 #content form input[type="password"] {
 	-webkit-border-radius: 3px;
