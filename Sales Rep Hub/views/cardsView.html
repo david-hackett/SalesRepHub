@@ -1,4 +1,4 @@
-<div id="cardsView" data-role="view" data-style="inset" data-title="My Customers" data-init="listViewCardsInit" data-model="cardsViewModel">
+<div id="cardsView" data-role="view" data-style="inset" data-title="Customers" data-init="listViewCardsInit" data-model="cardsViewModel">
     <header data-role="header">
         <div data-role="navbar">
             <!-- <a id="buttonAddNewCard" data-role="button" href="views/addCardView.html" data-align="right">Add</a> -->
@@ -8,16 +8,22 @@
     <ul data-role="listview" data-style="inset" data-bind="source: cardsDataSource" data-template="cardsListTemplate">
     </ul>
 </div>
-
+<!--Weather forecast template-->
+<script>
+     $('#footer').show();    
+</script>
 <script id="cardsListTemplate" type="text/x-kendo-template">
     <a href='views/singleCardView.html?cardName=#= data['cm_mstr.cm_addr'] #&cardNumber=#= data['ad_mstr.ad_sort'] #&cardTel=#= data['ad_mstr.ad_phone'] #&cardCity=#= data['ad_mstr.ad_city'] #&cardState=#= data['ad_mstr.ad_state'] #&cardZip=#= data['ad_mstr.ad_zip'] #&cardCurr=#= data['cm_mstr.cm_curr'] #&cardSite=#= data['cm_mstr.cm_site'] #' data-cardId="#= data['cm_mstr.cm_addr'] #" data-role="listview-link" class="j-listview-item"
 		
         	<div class="j-listview-item stores">            	
-                <div class="j-listview-item-content">                   
-           			<span>#= data['ad_mstr.ad_sort'] #</span>
+                <div class="j-listview-item-content">
                     <span>#= data['cm_mstr.cm_addr'] #</span>
+           			<span>#= data['ad_mstr.ad_sort'] #</span>
                 </div>
         	</div>
 		
      </a>   
 </script>
+
+
+   
