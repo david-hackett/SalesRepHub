@@ -27,15 +27,19 @@
             <script>
                 $("#chart").kendoChart({
                     series: [{
-                        field: 'cmh_tot_sale',
-                        name: 'Sales'
-              		}],
+                            field: 'cmh_tot_sale',
+                            name: 'Sales'
+                			},
+                        	{
+                            field: 'cmh_tot_cost',
+                            name: 'cost'
+    				}],
                     title: {
                         text: "Sales By Year"
                     },
                     categoryAxis: {
                         field: "cmh_year",
-                         name: 'Year'
+                        name: 'Year'
                     }
                 });
             </script>
