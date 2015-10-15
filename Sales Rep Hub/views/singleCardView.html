@@ -8,12 +8,15 @@
     </header>
     <div>
         <div id="cardFront" data-bind="attr: {class: cardStatus}">
-            <div>
-                <p> Code: <span data-bind="text: cardId"></span> </p>
-                <p> Name: <span data-bind="text: cardAmount"></span>
-                </p>
-                <p> Telephone: <span data-bind="text: barcodeURL"></span>
-                </p>
+            <div>                
+                <p> Code: <span data-bind="text: cardNumber"></span> </p>
+                <p> Name: <span data-bind="text: cardName"></span>  </p>
+                <p> Telephone: <span data-bind="text: cardTel"></span> </p>
+                <p> City: <span data-bind="text: cardCity"></span> </p>
+                <p> State: <span data-bind="text: cardState"></span> </p>
+                <p> Zip: <span data-bind="text: cardZip"></span> </p>
+                <p> Currency: <span data-bind="text: cardCurr"></span> </p>
+                <p> Site: <span data-bind="text: cardSite"></span> </p>
             </div>
         </div>
         <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
@@ -42,7 +45,7 @@
     
     <div class="j-listview-item-content">
         <span>#= data['cmh_hist.cmh_cust'] #</span>
-        <span>#= data['cmh_hist.cmh_tot_sale'] #</span>
+        <span>#= data['cmh_hist.cmh_tot_sale'] #</span>                
     </div>
     
 </script>
