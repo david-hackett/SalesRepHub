@@ -1,7 +1,7 @@
 <div id="cardsView" data-role="view" data-style="inset" data-title="Customers" data-init="listViewCardsInit" data-model="cardsViewModel">
     <header data-role="header">
         <div data-role="navbar">
-            <a id="buttonAddNewCard" data-role="button" href="views/addCardView.html" data-align="right">Add</a>
+            <!-- <a id="buttonAddNewCard" data-role="button" href="views/addCardView.html" data-align="right">Add</a> -->
             <span data-role="view-title"></span>
         </div>
     </header>
@@ -10,9 +10,12 @@
 </div>
 <!--Weather forecast template-->
 <script id="cardsListTemplate" type="text/x-kendo-template">
-    <a href='views/singleCardView.html?bonusPoints=#= data['cm_mstr.cm_addr'] #&cardNumber=#= data['ad_mstr.ad_phone'] #&cardAmount=#= data['ad_mstr.ad_sort'] #' data-cardId="#= data['cm_mstr.cm_addr'] #" data-role="listview-link" class="j-listview-item">
+    <a href='views/singleCardView.html?cardName=#= data['cm_mstr.cm_addr'] #&cardNumber=#= data['ad_mstr.ad_sort'] #&cardTel=#= data['ad_mstr.ad_phone'] #&cardCity=#= data['ad_mstr.ad_city'] #&cardState=#= data['ad_mstr.ad_state'] #&cardZip=#= data['ad_mstr.ad_zip'] #&cardCurr=#= data['cm_mstr.cm_curr'] #&cardSite=#= data['cm_mstr.cm_site'] #' data-cardId="#= data['cm_mstr.cm_addr'] #" data-role="listview-link" class="j-listview-item"
+          <div class="j-listview-item stores">
         <div class="j-listview-item-content">
             <span>#= data['cm_mstr.cm_addr'] #</span>
             <span>#= data['ad_mstr.ad_sort'] #</span>
         </div>
+        </div>
+     </a>   
 </script>

@@ -148,26 +148,25 @@
     });
 
     SingleCardViewModel = CardsViewModelBase.extend({
-        barcodeUrl: "",
+        cardName: "",
         cardId: "",
-        cardAmount: "",
+        cardTel: "",
         currentDate: "",
         cardStatus: "",        
 
-        setValues: function (cardNumber, bonusPoints, cardAmount) {
-            var that = this;
+        setValues: function (cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite) {
+            var that = this;                        
 
-            if (bonusPoints < 50) {
-                that.set("cardStatus", "silver");
-            } else {
-                that.set("cardStatus", "gold");
-            }
-
-            that.set("cardId", cardNumber);
-            that.set("barcodeUrl", that._generateBarcodeUrl(cardNumber));
+            that.set("cardNumber", cardNumber);
+            //that.set("barcodeUrl", that._generateBarcodeUrl(cardNumber));
             //that.set("cardId", "#" + cardNumber);
-            that.set("cardAmount", cardAmount);
-            that.set("barcodeURL", bonusPoints);
+            that.set("cardTel", cardTel);
+            that.set("cardName", cardName);
+            that.set("cardCity", cardCity);
+            that.set("cardState", cardState);
+            that.set("cardZip", cardZip);
+            that.set("cardCurr", cardCurr);
+            that.set("cardSite", cardSite);
             that.set("currentDate", kendo.toString(new Date(), "yyyy/MM/dd hh:mm tt"));
         },
 
