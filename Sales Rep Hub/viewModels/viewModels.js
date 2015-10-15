@@ -1,11 +1,23 @@
 (function ($, console, doc) {
     var announcementViewModel,
         cardsViewModel,
+        salesViewModel,
         storesListViewModel,
         AddCardViewModel,
+        AddSalesViewModel,
         CardsViewModelBase,
         SingleCardViewModel,
         RewardsViewModel;
+    
+     AddSalesViewModel = kendo.data.ObservableObject.extend({
+        cardNumber: null,
+
+        init: function () {
+            kendo.data.ObservableObject.fn.init.apply(this, [this]);
+            var that = this;
+            that.set("cardNumber", null);
+        }
+     });
 
     AddCardViewModel = kendo.data.ObservableObject.extend({
         cardNumber: null,
@@ -140,7 +152,7 @@
         cardId: "",
         cardAmount: "",
         currentDate: "",
-        cardStatus: "",
+        cardStatus: "",        
 
         setValues: function (cardNumber, bonusPoints, cardAmount) {
             var that = this;
@@ -277,6 +289,42 @@
             that.set("cardsDataSource", dataSource);
         }
     });
+    
+    salesViewModel = kendo.data.ObservableObject.extend({
+        salessDataSource: null,
+
+        init: function () {
+            var that = this,
+                dataSource,
+                jsonUrlToLoad;
+
+            kendo.data.ObservableObject.fn.init.apply(that, []);
+
+            //When you build for Apache Cordova 3.0.0, apply this code instead of using relative URLs. In Apache Cordova 3.0.0, relative URLs might not work properly.
+            //jsonUrlToLoad = app.makeUrlAbsolute("data/weather.json");
+            jsonUrlToLoad = "data/SalesByCustomers.json";
+
+            dataSource = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: jsonUrlToLoad,
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "local_variables.BrowseRowOrderIndex"
+                    },
+                    data: "data"
+                }
+            });
+            dataSource.fetch(function () {
+                var data = this.data();
+                console.log("SalesByCustomers - count: " + data.length);
+            }); 
+            that.set("salesDataSource", dataSource);
+        }
+    });
 
     /*
     	cardsViewModel = kendo.observable({
@@ -331,9 +379,11 @@
     $.extend(window, {
         singleCardViewModel: new SingleCardViewModel(),
         rewardsViewModel: new RewardsViewModel(),
-        addCardViewModel: new AddCardViewModel(),
+        addCardViewModel: new AddCardViewModel(),        
+        addSalesViewModel: new AddSalesViewModel(),
         announcementViewModel: announcementViewModel,
-        cardsViewModel: new cardsViewModel(),
+        cardsViewModel: new cardsViewModel(),       
+        salesViewModel: new salesViewModel(),
         storesListViewModel: storesListViewModel
     });
 
