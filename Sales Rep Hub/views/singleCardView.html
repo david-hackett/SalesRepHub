@@ -25,7 +25,27 @@
 		-->
         <div id="cardBack" data-role="view" data-style="inset" data-title="Sales" data-model="salesViewModel">
             <p>Sales</p>
-            <ul id="salesList" data-role="listview" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul>
+            <!-- <ul id="salesList" data-role="chart" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul> -->
+            <div id="chart" data-bind="source: salesDataSource"></div>
+            <script>
+                $("#chart").kendoChart({
+                    series: [{
+                            field: 'cmh_tot_sale',
+                            name: 'Sales'
+                			},
+                        	{
+                            field: 'cmh_tot_cost',
+                            name: 'cost'
+    				}],
+                    title: {
+                        text: "Sales By Year"
+                    },
+                    categoryAxis: {
+                        field: "cmh_year",
+                        name: 'Year'
+                    }
+                });
+            </script>
         </div>
         <script id="salesListTemplate" type="text/x-kendo-template">
             <div class="j-listview-item-content">
@@ -42,12 +62,10 @@
         </ul>-->
 </div>
 <script id="salesListTemplate" type="text/x-kendo-template">
-    
     <div class="j-listview-item-content">
         <span>#= data['cmh_hist.cmh_cust'] #</span>
         <span>#= data['cmh_hist.cmh_tot_sale'] #</span>                
     </div>
-    
 </script>
 -->
 </div>
