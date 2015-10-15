@@ -47,7 +47,7 @@ form:after {
 	clear: both;
 	visibility: hidden;
 }
-.container {   height: 90% width: 90%;}
+.container { height: 90% width: 90%;}
 #content {
 	background: #f9f9f9;
 	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
@@ -67,6 +67,7 @@ form:after {
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
 	width: 330px;
+    top: 100px; 
 }
 #content h1 {
 	color: #7E7E7E;
@@ -239,13 +240,13 @@ form:after {
 	-ms-border-radius: 0 0 5px 5px;
 	border-radius: 0 0 5px 5px;
 	border-top: 1px solid #CFD5D9;
-	padding: 15px 0;
+	
 }
 .button a {
 	background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
 	color: #7E7E7E;
 	font-size: 17px;
-	padding: 2px 0 2px 40px;
+	
 	text-decoration: none;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -286,5 +287,5 @@ form:after {
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	width: 120px;	
-    border: 10px;
+   
 }
