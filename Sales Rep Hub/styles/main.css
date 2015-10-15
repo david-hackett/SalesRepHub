@@ -243,6 +243,12 @@
     display:block;
     font-size: 0.9em;
 }
+
+.j-listview-item > .j-listview-item-content1 > span {
+    display:inline;
+    font-size: 0.9em;
+}
+
 .j-listview-item > .j-listview-item-content > span:last-of-type:not(:first-of-type) {
     font-size: 0.7em;
     opacity: 0.7;
@@ -309,3 +315,5 @@
      height: 500px; 
      width: 340px;  
 }
+
+img { max-width: 100%; }

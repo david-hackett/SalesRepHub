@@ -7,17 +7,19 @@
         </div>
     </header>
     <div>
-        <div id="cardFront" data-bind="attr: {class: cardStatus}">
-            <div>                
-                <p> Code: <span data-bind="text: cardNumber"></span> </p>
-                <p> Name: <span data-bind="text: cardName"></span>  </p>
-                <p> Telephone: <span data-bind="text: cardTel"></span> </p>
-                <p> City: <span data-bind="text: cardCity"></span> </p>
-                <p> State: <span data-bind="text: cardState"></span> </p>
-                <p> Zip: <span data-bind="text: cardZip"></span> </p>
-                <p> Currency: <span data-bind="text: cardCurr"></span> </p>
-                <p> Site: <span data-bind="text: cardSite"></span> </p>
-            </div>
+        <div id="cardFront" data-bind="attr: {class: cardStatus}">           
+                <div class="j-listview-item stores">
+                    <div class="j-listview-item-content">
+                        <span data-bind="text: cardNumber"></span>
+                        <span data-bind="text: cardName"></span>
+                        <span data-bind="text: cardTel"></span>
+                        <span data-bind="text: cardCity"></span>
+                        <span data-bind="text: cardState"></span>
+                        <span data-bind="text: cardZip"></span>
+                        <span data-bind="text: cardCurr"></span>
+                        <span data-bind="text: cardSite"></span>
+                    </div>
+                </div>          
         </div>
         <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
             <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id" />
@@ -32,11 +34,11 @@
                     series: [{
                             field: 'cmh_tot_sale',
                             name: 'Sales'
-                			},
-                        	{
+                   },
+                        {
                             field: 'cmh_tot_cost',
                             name: 'cost'
-    				}],
+        }],
                     title: {
                         text: "Sales By Year"
                     },
@@ -64,7 +66,7 @@
 <script id="salesListTemplate" type="text/x-kendo-template">
     <div class="j-listview-item-content">
         <span>#= data['cmh_hist.cmh_cust'] #</span>
-        <span>#= data['cmh_hist.cmh_tot_sale'] #</span>                
+        <span>#= data['cmh_hist.cmh_tot_sale'] #</span>
     </div>
 </script>
 -->
