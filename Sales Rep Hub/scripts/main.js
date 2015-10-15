@@ -74,14 +74,17 @@ function onDeviceReady() {
 			.done(function(result) {
 				var len = result.length,
 				    pinImage = new google.maps.MarkerImage(
-                                    "images/cofeeCup-sprite.png",
+                                    "images/qad-logo.png",
                                     new google.maps.Size(49, 49),
                                     new google.maps.Point(0, 202));
 
                 
 				for (var i = 0; i < len; i++) {
 					locations.push({
-						title: result[i].title + ", " + result[i].description,
+						Name:    result[i].Name,
+                        Address: result[i].Address,
+                        Phone:   result[i].Phone,
+                        Link:    result[i].Link,
 						position: new google.maps.LatLng(result[i].latitude, result[i].longitude),
                         icon: pinImage,
 						animation: google.maps.Animation.DROP
@@ -112,6 +115,13 @@ function onDeviceReady() {
 						shadow: tmpLocation.shadow,
 						animation: tmpLocation.animation
 					});
+                    
+                     marker.addListener('click', function() {
+                        //mapObj.setZoom(8);
+                        //mapObj.setCenter(marker.getPosition());
+                        app.navigate("views/singleCardView.html?bonusPoints=" + tmpLocation["Name"] + "&cardNumber=" + tmpLocation["Phone"] + "&cardAmount=" + tmpLocation["Address"] );                                                                         
+                      });
+                    
 					oneMarkerAtTime();
 				}
 			}

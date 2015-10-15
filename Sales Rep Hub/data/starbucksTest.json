@@ -4,20 +4,26 @@
         "Address": "Imaginary street 14",
         "latitude": 43.466251,
         "longitude": -80.517769,
-        "OpenNow" : 1
+        "Phone": "0876402415",
+        "OpenNow" : 1,
+        "Link" : "www.qad.com"
     },
     {
         "Name": "Jiterz Coffehouse",
         "Address": "Imaginary street 89",
         "latitude": 43.475408,
         "longitude": -80.533733,
-        "OpenNow" : 1
+        "Phone": "0876402415",
+        "OpenNow" : 1,
+        "Link" : "www.apple.com"
     },
      {
         "Name": "Jiterz Cafe",
         "Address": "Imaginary street 23",
         "latitude": 43.438526,
         "longitude": -80.555620,
-        "OpenNow" : 0
+         "Phone": "0876402415",
+        "OpenNow" : 0,
+        "link" : "www.karl.com"
     }
 ]
