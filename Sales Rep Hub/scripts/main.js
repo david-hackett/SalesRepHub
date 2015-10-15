@@ -74,7 +74,7 @@ function onDeviceReady() {
 			.done(function(result) {
 				var len = result.length,
 				    pinImage = new google.maps.MarkerImage(
-                                    "images/cofeeCup-sprite.png",
+                                    "images/qad-logo.png",
                                     new google.maps.Size(49, 49),
                                     new google.maps.Point(0, 202));
 
