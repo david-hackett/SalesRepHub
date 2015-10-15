@@ -7,19 +7,33 @@
         </div>
     </header>
     <div>
-        <div id="cardFront" data-bind="attr: {class: cardStatus}">           
-                <div class="j-listview-item stores">
-                    <div class="j-listview-item-content">
-                        <span data-bind="text: cardNumber"></span>
+        <div id="cardFront" data-bind="attr: {class: cardStatus}">
+            <div class="card-line"> <span  data-bind="text: cardNumber"></span></div>
+            <div class="j-listview-item stores">                     
+                <div class="j-listview-item-content">                    
+                    <div class="j-listview-item-content1">Code:
                         <span data-bind="text: cardName"></span>
+                    </div>
+                    <div class="j-listview-item-content1">Telephone:
                         <span data-bind="text: cardTel"></span>
+                    </div>
+                    <div class="j-listview-item-content1">City:
                         <span data-bind="text: cardCity"></span>
+                    </div>
+                    <div class="j-listview-item-content1">State
                         <span data-bind="text: cardState"></span>
+                    </div>
+                    <div class="j-listview-item-content1">Zip:
                         <span data-bind="text: cardZip"></span>
+                    </div>
+                    <div class="j-listview-item-content1">Currency:
                         <span data-bind="text: cardCurr"></span>
+                    </div>
+                    <div class="j-listview-item-content1">Site:
                         <span data-bind="text: cardSite"></span>
                     </div>
-                </div>          
+                </div>
+            </div>
         </div>
         <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
             <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id" />

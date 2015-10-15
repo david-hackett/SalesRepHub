@@ -156,11 +156,11 @@
 
         setValues: function (cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite) {
             var that = this;                        
-
+		console.log("CUSTOMERTELEPHONE : ", cardTel);
             that.set("cardNumber", cardNumber);
             //that.set("barcodeUrl", that._generateBarcodeUrl(cardNumber));
             //that.set("cardId", "#" + cardNumber);
-            that.set("cardTel", cardTel);
+            that.set("cardTel", kendo.toString(cardTel));
             that.set("cardName", cardName);
             that.set("cardCity", cardCity);
             that.set("cardState", cardState);
