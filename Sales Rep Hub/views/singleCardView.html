@@ -8,9 +8,10 @@
     </header>
     <div>
         <div id="cardFront" data-bind="attr: {class: cardStatus}">
-            <div class="card-line"> <span  data-bind="text: cardNumber"></span></div>
-            <div class="j-listview-item stores">                     
-                <div class="j-listview-item-content">                    
+            <div class="card-line"> <span data-bind="text: cardNumber"></span>
+            </div>
+            <div class="j-listview-item stores">
+                <div class="j-listview-item-content">
                     <div class="j-listview-item-content1">Code:
                         <span data-bind="text: cardName"></span>
                     </div>
@@ -32,18 +33,19 @@
                     <div class="j-listview-item-content1">Site:
                         <span data-bind="text: cardSite"></span>
                     </div>
-                </div>                
+                    <div >
+                        <p>
+                            <a style="float:left" width="300px" id="loginButton" data-role="button" class="button">Sales Data</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-             <div>
-                    <a id="loginButton" data-role="button" class="button">Sales Data</a>
-             </div>
         </div>
         <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
             <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id" />
         </div>
 		-->
         <div id="cardBack" data-role="view" data-style="inset" data-title="Sales" data-model="salesViewModel">
-            
             <!-- <ul id="salesList" data-role="chart" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul> -->
             <div id="chart" data-bind="source: salesDataSource"></div>
             <script>

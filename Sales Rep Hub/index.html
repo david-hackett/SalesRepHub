@@ -57,7 +57,10 @@
     </div>
     
     <script>
-        $('#footer').hide();
+        var alreadyRunning = localStorage.getItem("AppRunning");
+        
+        if (!alreadyRunning)
+        	$('#footer').hide();
         
         var app = new kendo.mobile.Application(document.body, {
             transition: "slide",
