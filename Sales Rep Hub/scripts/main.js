@@ -182,11 +182,16 @@ function onDeviceReady() {
 		},
         
 		singleCardShow: function (args) {
-			var cardNumber = args.view.params.cardNumber,
-    			bonusPoints = args.view.params.bonusPoints,
-    			cardAmount = args.view.params.cardAmount;
-            
-			singleCardViewModel.setValues(cardNumber, bonusPoints, cardAmount);
+			var cardNumber = args.view.params.cardNumber, // cm_mstr.cm_addr
+    			cardName = args.view.params.cardName, //ad_mstr.ad_sort
+    			cardTel = args.view.params.cardTel, //ad_mstr.ad_phone
+                cardCity = args.view.params.cardCity, //ad_mstr.ad_city
+                cardState = args.view.params.cardState, //ad_mstr.ad_state
+                cardZip = args.view.params.cardZip, //ad_mstr.ad_zip
+                cardCurr = args.view.params.cardCurr, // cm_mstr.cm_curr
+                cardSite = args.view.params.cardSite; //cm_mstr.cm_site
+                            
+			singleCardViewModel.setValues(cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite);
 		},
         
 		singleCardInit: function(e) {
