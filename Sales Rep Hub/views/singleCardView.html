@@ -1,7 +1,4 @@
-<div id="singleCardView" 
-     data-role="view" data-style="inset" 
-     data-title="Customer Detail" data-show="singleCardShow" data-init="singleCardInit" 
-     data-model="singleCardViewModel">
+<div id="singleCardView" data-role="view" data-style="inset" data-title="Customer Detail" data-show="singleCardShow" data-init="singleCardInit" data-model="singleCardViewModel">
     <header data-role="header" data-id="jitterz-default-header">
         <div data-role="navbar">
             <a class="nav-button" data-role="backbutton" data-align="left">Back</a>
@@ -10,20 +7,44 @@
         </div>
     </header>
     <div>
-        <div id="cardFront" data-bind="attr: {class: cardStatus}">            
+        <div id="cardFront" data-bind="attr: {class: cardStatus}">
             <div>
                 <p> Code: <span data-bind="text: cardId"></span> </p>
-                <p> Name: <span data-bind="text: cardAmount"></span></p>                  
-                <p> Telephone: <span data-bind="text: barcodeURL"></span></p>
-            </div>            
+                <p> Name: <span data-bind="text: cardAmount"></span>
+                </p>
+                <p> Telephone: <span data-bind="text: barcodeURL"></span>
+                </p>
+            </div>
         </div>
-        <div id="cardBack" data-bind="attr: {class: cardStatus}">
-            <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id"/>
+        <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
+            <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id" />
         </div>
-        <ul data-role="actionsheet" class="singleCardActionsList" id="singleCardActions" data-popup='{"direction": "left"}'>
-            <li>
-                <a href="#" data-role="button" data-bind="events: { click : deleteCard }" class="singleCardDeleteButton">Delete</a>
-            </li>
-        </ul>
+		-->
+        <div id="cardBack" data-role="view" data-style="inset" data-title="Sales" data-model="salesViewModel">
+            <p>Sales</p>
+            <ul id="salesList" data-role="listview" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul>
+        </div>
+        <script id="salesListTemplate" type="text/x-kendo-template">
+            <div class="j-listview-item-content">
+            </div>
+        </script>
     </div>
+    <!--
+    <p>
+        Blah Blah
+    </p>
+     <div id="salesView" data-role="view" data-style="inset" data-title="Sales" data-model="addSalesViewModel">     
+        <p>Sales</p>
+        <!--<ul id="salesList" data-role="listview" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate">
+        </ul>-->
+</div>
+<script id="salesListTemplate" type="text/x-kendo-template">
+    
+    <div class="j-listview-item-content">
+        <span>#= data['cmh_hist.cmh_cust'] #</span>
+        <span>#= data['cmh_hist.cmh_tot_sale'] #</span>
+    </div>
+    
+</script>
+-->
 </div>

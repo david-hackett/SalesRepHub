@@ -124,18 +124,7 @@
     text-align: center;
 }
 
-/* card styles */
-#cardFront, #cardBack, #rewardCardFront, #rewardCardBack {
-    border-radius: 10px;
-    cursor: pointer;
-    width: 300px;
-    height: 170px;
-    margin: 10px auto;
-    position: relative;
-    box-shadow: 0px 0px 2px #333;
-    -webkit-box-shadow: 0px 0px 2px #333;
-}
-#cardBack, #rewardCardBack { display:none; }
+
 
 #cardBack img,
 #rewardCardBack img {
@@ -288,3 +277,22 @@
         background-size: 100%;
 	}
 }
+
+#salesList
+{
+     /*height: 50%;
+     overflow: auto;*/
+}
+
+/* card styles */
+#cardFront, #cardBack, #rewardCardFront, #rewardCardBack {
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;    
+    overflow: auto;
+    margin: 10px auto;
+    position: fixed;
+    box-shadow: 0px 0px 2px #333;
+    -webkit-box-shadow: 0px 0px 2px #333;
+}
+#cardBack, #rewardCardBack { display:none; }
