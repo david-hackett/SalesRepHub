@@ -7,14 +7,19 @@
         </div>
     </header>
     <div>
-        <div id="cardFront" data-bind="attr: {class: cardStatus}">
-            <div>
-                <p> Code: <span data-bind="text: cardId"></span> </p>
-                <p> Name: <span data-bind="text: cardAmount"></span>
-                </p>
-                <p> Telephone: <span data-bind="text: barcodeURL"></span>
-                </p>
-            </div>
+        <div id="cardFront" data-bind="attr: {class: cardStatus}">           
+                <div class="j-listview-item stores">
+                    <div class="j-listview-item-content">
+                        <span data-bind="text: cardNumber"></span>
+                        <span data-bind="text: cardName"></span>
+                        <span data-bind="text: cardTel"></span>
+                        <span data-bind="text: cardCity"></span>
+                        <span data-bind="text: cardState"></span>
+                        <span data-bind="text: cardZip"></span>
+                        <span data-bind="text: cardCurr"></span>
+                        <span data-bind="text: cardSite"></span>
+                    </div>
+                </div>          
         </div>
         <!-- <div id="cardBack" data-bind="attr: {class: cardStatus}">
             <img id="barcodeImage" data-bind="attr: {src:barcodeUrl}" alt="Shop Card Id" />
@@ -22,7 +27,27 @@
 		-->
         <div id="cardBack" data-role="view" data-style="inset" data-title="Sales" data-model="salesViewModel">
             <p>Sales</p>
-            <ul id="salesList" data-role="listview" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul>
+            <!-- <ul id="salesList" data-role="chart" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul> -->
+            <div id="chart" data-bind="source: salesDataSource"></div>
+            <script>
+                $("#chart").kendoChart({
+                    series: [{
+                            field: 'cmh_tot_sale',
+                            name: 'Sales'
+                   },
+                        {
+                            field: 'cmh_tot_cost',
+                            name: 'cost'
+        }],
+                    title: {
+                        text: "Sales By Year"
+                    },
+                    categoryAxis: {
+                        field: "cmh_year",
+                        name: 'Year'
+                    }
+                });
+            </script>
         </div>
         <script id="salesListTemplate" type="text/x-kendo-template">
             <div class="j-listview-item-content">
@@ -39,12 +64,10 @@
         </ul>-->
 </div>
 <script id="salesListTemplate" type="text/x-kendo-template">
-    
     <div class="j-listview-item-content">
         <span>#= data['cmh_hist.cmh_cust'] #</span>
         <span>#= data['cmh_hist.cmh_tot_sale'] #</span>
     </div>
-    
 </script>
 -->
 </div>
