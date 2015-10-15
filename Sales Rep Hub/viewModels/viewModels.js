@@ -148,26 +148,48 @@
     });
 
     SingleCardViewModel = CardsViewModelBase.extend({
-        barcodeUrl: "",
+        cardName: "",
         cardId: "",
-        cardAmount: "",
+        cardTel: "",
         currentDate: "",
         cardStatus: "",        
 
-        setValues: function (cardNumber, bonusPoints, cardAmount) {
+        setValues: function (cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite) {
             var that = this;
-
+            console.log("HTMLVALUES",cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite);         
+            
+		 /*
+        "cm_mstr.cm_addr": "10C1005",
+        "ad_mstr.ad_sort": "Rockland Industrial Company",
+        "ad_mstr.ad_phone": "",
+        "ad_mstr.ad_city": "Rockland",
+        "ad_mstr.ad_state": "NJ",
+        "ad_mstr.ad_zip": "21216",
+        "cm_mstr.cm_region": "US-E",
+        "ctry_mstr.ctry_country": "USA - TAX PURPOSE",
+        "cm_mstr.cm_bill": "",
+        "cm_mstr.cm_type": "ENDU",
+        "ad_mstr.ad_county": "",
+        "ad_mstr.ad_date": "2010-02-08T08:00:00.000Z",
+        "cm_mstr.cm_site": "10-100",
+        "cm_mstr.cm_curr": "USD",
+           
             if (bonusPoints < 50) {
                 that.set("cardStatus", "silver");
             } else {
                 that.set("cardStatus", "gold");
-            }
+            } */
 
-            that.set("cardId", cardNumber);
-            that.set("barcodeUrl", that._generateBarcodeUrl(cardNumber));
+            that.set("cardNumber", cardNumber);
+            //that.set("barcodeUrl", that._generateBarcodeUrl(cardNumber));
             //that.set("cardId", "#" + cardNumber);
-            that.set("cardAmount", cardAmount);
-            that.set("barcodeURL", bonusPoints);
+            that.set("cardTel", cardTel);
+            that.set("cardName", cardName);
+            that.set("cardCity", cardCity);
+            that.set("cardState", cardState);
+            that.set("cardZip", cardZip);
+            that.set("cardCurr", cardCurr);
+            that.set("cardSite", cardSite);
             that.set("currentDate", kendo.toString(new Date(), "yyyy/MM/dd hh:mm tt"));
         },
 
