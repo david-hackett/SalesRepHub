@@ -50,27 +50,20 @@
                     <input type="password" placeholder="Password" required="" id="password" />
                 </div>
                 <div>
-                    <!-- <input href="views/cardsView.html" type="submit" value="Log in" /> -->
                     <a id="loginButton" href="views/cardsView.html"  data-role="button" class="button">Login</a>
-                    <!-- <button id="loginButton" href="views/cardsView.html" onclick="validateFormOnSubmit">Login</button> 
-
-					<a id="loginButton"  href="views/cardsView.html" data-role="button" class="button">Login</a>
--->
                 </div>
             </form>
         </section>
     </div>
+    
     <script>
         $('#footer').hide();
+        
         var app = new kendo.mobile.Application(document.body, {
             transition: "slide",
             layout: "jitterz-default"
         });
-
-
-        function validateFormOnSubmit1() {
-            app.navigate("views/cardsView.html");
-        }
+        
     </script>
 </body>
 

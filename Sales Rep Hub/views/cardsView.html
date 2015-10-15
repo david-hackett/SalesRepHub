@@ -10,7 +10,7 @@
 </div>
 <!--Weather forecast template-->
 <script>
-     $('#footer').show();
+     $('#footer').show();    
 </script>
 <script id="cardsListTemplate" type="text/x-kendo-template">
     <a href='views/singleCardView.html?cardName=#= data['cm_mstr.cm_addr'] #&cardNumber=#= data['ad_mstr.ad_sort'] #&cardTel=#= data['ad_mstr.ad_phone'] #&cardCity=#= data['ad_mstr.ad_city'] #&cardState=#= data['ad_mstr.ad_state'] #&cardZip=#= data['ad_mstr.ad_zip'] #&cardCurr=#= data['cm_mstr.cm_curr'] #&cardSite=#= data['cm_mstr.cm_site'] #' data-cardId="#= data['cm_mstr.cm_addr'] #" data-role="listview-link" class="j-listview-item"
