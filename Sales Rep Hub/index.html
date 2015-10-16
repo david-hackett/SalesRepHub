@@ -44,10 +44,10 @@
                    
                 </div>
                 <div>
-                    <input type="text" placeholder="Username" required="" id="username" />
+                    <input id="salesid" type="text" placeholder="Salesperson" required="" id="username" value="" autocomplete="off"/>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required="" id="password" />
+                    <input type="password" placeholder="Password" required="" id="password" value=""/>
                 </div>
                 <div>
                     <a id="loginButton" href="views/cardsView.html"  data-role="button" class="button">Login</a>
@@ -61,6 +61,10 @@
         
         if (!alreadyRunning)
         	$('#footer').hide();
+        
+        $( document ).ready(function() {
+           $('#salesid').val('');
+        });
         
         var app = new kendo.mobile.Application(document.body, {
             transition: "slide",

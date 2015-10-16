@@ -155,7 +155,7 @@
         currentDate: "",
         cardStatus: "",        
 
-        setValues: function (cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite) {
+        setValues: function (cardNumber, cardName, cardTel, cardCity, cardState, cardZip, cardCurr, cardSite, cardContact) {
             var that = this;                        
 		console.log("CUSTOMERTELEPHONE : ", cardTel);
             that.set("cardNumber", cardNumber);

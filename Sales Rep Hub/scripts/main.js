@@ -52,6 +52,9 @@ function onDeviceReady() {
 
             // Use Google API to get the location data for the current coordinates
             latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            
+            if (!latlng.lat() || latlng.lat() !== "43.465187")
+            	latlng = new google.maps.LatLng("52.671880", "-8.554884");
 
             myOptions = {
                 zoom: 11,
@@ -71,8 +74,8 @@ function onDeviceReady() {
                 {
                     position: latlng,
                     title: "Your Location"
-    }
-   ];
+            }
+           ];
 
             _private.addMarkers(pin, mapObj);
 

@@ -1,9 +1,9 @@
 [
     {
-        "Name": "QAD",
-        "Address": "Castletroy",
-        "latitude": 52.671880,
-        "longitude": -8.554884,
+        "Name": "Finnegan's Bar",
+        "Address": "Dublin Road",
+        "latitude": 52.671178,
+        "longitude": -8.515863,
         "Phone": "0876402415",
         "OpenNow" : 1,
         "City": "Limerick",
