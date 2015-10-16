@@ -151,6 +151,7 @@
         cardName: "",
         cardId: "",
         cardTel: "",
+        cardContact: "",
         currentDate: "",
         cardStatus: "",        
 
@@ -167,6 +168,7 @@
             that.set("cardZip", cardZip);
             that.set("cardCurr", cardCurr);
             that.set("cardSite", cardSite);
+            that.set("cardContact", cardContact);
             that.set("currentDate", kendo.toString(new Date(), "yyyy/MM/dd hh:mm tt"));
         },
 
