@@ -138,7 +138,7 @@ function onDeviceReady() {
                         //mapObj.setZoom(8);
                         //mapObj.setCenter(marker.getPosition());
 
-                        app.navigate("views/singleCardView.html?cardName=" + tmpLocation["Name"] + "&cardTel=" + tmpLocation["Phone"] + "&cardCity=" + tmpLocation["City"] + "&cardState=" + tmpLocation["State"] + "&cardZip=" + tmpLocation["Zip"] + "&cardCurr=" + tmpLocation["Currency"] + "&cardSite=" + tmpLocation["Site"] + "&cardContact=" + tmpLocation["Contact"]);
+                        app.navigate("views/singleCardView.html?cardName=" + tmpLocation["Name"] + "&cardNumber=" + tmpLocation["Name"] + "&cardTel=" + tmpLocation["Phone"] + "&cardCity=" + tmpLocation["City"] + "&cardState=" + tmpLocation["State"] + "&cardZip=" + tmpLocation["Zip"] + "&cardCurr=" + tmpLocation["Currency"] + "&cardSite=" + tmpLocation["Site"] + "&cardContact=" + tmpLocation["Contact"]);
                         //'views/singleCardView.html?cardName=#= data['cm_mstr.cm_addr'] #&cardNumber=#= data['ad_mstr.ad_sort'] #&cardTel=#= data['ad_mstr.ad_phone'] #&cardCity=#= data['ad_mstr.ad_city'] #&cardState=#= data['ad_mstr.ad_state'] #&cardZip=#= data['ad_mstr.ad_zip'] #&cardCurr=#= data['cm_mstr.cm_curr'] #&cardSite=#= data['cm_mstr.cm_site'] #' data-cardId="#= data['cm_mstr.cm_addr'] #" data-role="listview-link" class="j-listview-item"
                     });
 
