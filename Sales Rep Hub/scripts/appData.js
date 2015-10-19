@@ -5,7 +5,7 @@ var AppData = function() {
         _private;
 
 	_endpoints = {
-		starbucksTest: {path:"scripts/starbucksTest.json", verb:"GET"}
+		starbucksTest: {path:"scripts/LocalCustomers.json", verb:"GET"}
 	};
     
 	_initialCards = [
@@ -118,7 +118,7 @@ var AppData = function() {
 
 	return {
 		getStarbucksLocations: function(lat, lng, max) {
-            return $.getJSON("data/starbucksTest.json");
+            return $.getJSON("data/LocalCustomers.json");
 		},
         
 		getInitialCards: function() {
