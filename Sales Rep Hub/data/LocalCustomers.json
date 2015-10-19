@@ -4,7 +4,7 @@
         "Address": "Dublin Road",
         "latitude": 52.671178,
         "longitude": -8.515863,
-        "Phone": "0876402415",
+        "Phone": "087 6402415",
         "OpenNow" : 1,
         "City": "Annacotty",
         "State": "LIMERICK",
@@ -19,7 +19,7 @@
         "Address": "ENNIS ROAD",
         "latitude": 52.670319,
         "longitude": -8.653557,
-        "Phone": "0876543456",
+        "Phone": "087 6543456",
         "OpenNow" : 1,
         "City": "ENNIS ROAD",
         "State": "LIMERICK",
@@ -34,7 +34,7 @@
         "Address": "Shelton Business Park",
         "latitude": 52.596323,
         "longitude": -8.548522,
-         "Phone": "087123456",
+         "Phone": "087 1234467",
         "OpenNow" : 0,
         "City": "Ballyneety",
         "State": "LIMERICK",
@@ -42,6 +42,6 @@
         "Currency": "Eur",
         "Site": "10-300", 
          "Contact": "Paul Murphy",
-        "link" : "www.karl.com"
+        "link" : "www.ISHKA.ie"
     }
 ]
