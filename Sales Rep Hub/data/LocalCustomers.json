@@ -1,0 +1,47 @@
+[
+    {
+        "Name": "Finnegans Restaurant",
+        "Address": "Dublin Road",
+        "latitude": 52.671178,
+        "longitude": -8.515863,
+        "Phone": "0876402415",
+        "OpenNow" : 1,
+        "City": "Annacotty",
+        "State": "LIMERICK",
+        "Zip": "V94 O4D5 ",
+        "Currency": "Eur",
+        "Site": "10-100",
+        "Contact": "John Finnegan",
+        "Link" : "www.finneganspub.ie"
+    },
+    {
+        "Name": "THE STRAND HOTEL",
+        "Address": "ENNIS ROAD",
+        "latitude": 52.670319,
+        "longitude": -8.653557,
+        "Phone": "0876543456",
+        "OpenNow" : 1,
+        "City": "ENNIS ROAD",
+        "State": "LIMERICK",
+        "Zip": "V94 O3F2",
+        "Currency": "Eur",
+        "Site": "10-200",
+        "Contact": "Ann Shannon",
+        "Link" : "www.strandhotel.ie"
+    },
+     {
+        "Name": "Munster Soft Drinks Ltd",
+        "Address": "Shelton Business Park",
+        "latitude": 52.596323,
+        "longitude": -8.548522,
+         "Phone": "087123456",
+        "OpenNow" : 0,
+        "City": "Ballyneety",
+        "State": "LIMERICK",
+        "Zip": "V94 03F2",
+        "Currency": "Eur",
+        "Site": "10-300", 
+         "Contact": "Paul Murphy",
+        "link" : "www.karl.com"
+    }
+]
