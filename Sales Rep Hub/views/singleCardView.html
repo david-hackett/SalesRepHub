@@ -36,10 +36,12 @@
                     <div class="j-listview-item-content1">Site:
                         <span data-bind="text: cardSite"></span>
                     </div>
-                    <div >
-                        <p>
-                            <a id="salesButton" data-role="button" class="button">&nbsp;Sales Data</a>
-                        </p>
+                    <div>
+                        
+                            <div>
+                                <a id="salesButton"  data-role="button" class="button">Sales Data</a>
+                            </div>
+                        
                     </div>
                 </div>
             </div>
@@ -51,29 +53,84 @@
         <div id="cardBack" data-role="view" data-style="inset" data-title="Sales" data-model="salesViewModel">
             <!-- <ul id="salesList" data-role="chart" data-style="inset" data-bind="source: salesDataSource" data-template="salesListTemplate"></ul> -->
             <div id="chart" data-bind="source: salesDataSource"></div>
+            <div id="chart2" data-bind="source: salesDataSource"></div>
+            <div id="chart3" data-bind="source: salesDataSource"></div>
             <script>
+                var gridElement = $("#cardBack");
+
+                function resizeGrid() {
+                    gridElement.data("kendoChart").resize();
+                }
+
+                $(window).load(function () {
+                    resizeGrid();
+                });
+
                 $("#chart").kendoChart({
                     series: [{
+                            type: "line",
                             field: 'cmh_tot_sale',
                             name: 'Sales'
-                   			},
-                             {
+                      },
+                        {
                             field: 'cmh_tot_for',
                             name: 'Forecast'
-                   			},
-                            {
-                                field: 'cmh_tot_cost',
-                                name: 'Quotes',
-                                color: 'blue'
-                            }],
+                      }],
                     title: {
-                        text: "Sales By Year"
+                        text: "Sales/Forecast By Year"
                     },
                     categoryAxis: {
                         field: "cmh_year",
                         name: 'Year'
                     }
                 });
+
+  
+                $("#chart2").kendoChart({
+                    series: [{
+                            type: "line",
+                            field: 'cmh_tot_sale',
+                            name: 'Sales'
+                      },
+                        {
+                            field: 'cmh_tot_cost',
+                            name: 'Quote'
+                      }],
+                    title: {
+                        text: "Sales/Quotes By Year"
+                    },
+                    categoryAxis: {
+                        field: "cmh_year",
+                        name: 'Year'
+                    }
+                });
+                
+                 $("#chart3").kendoChart({
+                    legend: {
+                        position: "none"
+                    },
+                  series: [{
+                    type: "pie",
+                    field: "cmh_tot_sale",
+                    categoryField: "cm_site",
+                    explodeField: "explode"
+                }], 
+                     
+        
+                    title: {
+                        text: "Sales By Site"
+                    },
+                     tooltip: {
+                    visible: true,
+                     template: "${ category }"
+                } 
+
+                });
+                
+                       function onSeriesClick(e) {
+            kendoConsole.log(kendo.format("Series click :: {0} ({1}): {2}",
+                e.series.name, e.category, e.value));
+        }
             </script>
         </div>
         <script id="salesListTemplate" type="text/x-kendo-template">

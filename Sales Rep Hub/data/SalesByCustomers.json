@@ -6,7 +6,7 @@
   "data": [
     {
       "cmh_cust": "10C1000",
-      "ad_mstr.ad_sort": "Wal-Mart",
+      "ad_sort": "Wal-Mart",
       "cm_slspsn[1]": "10SP01",
       "cmh_year": 2012,
       "cmh_tot_sale": 80651.8,
@@ -30,7 +30,7 @@
     },
     {
       "cmh_cust": "10C1000",
-      "ad_mstr.ad_sort": "MediLogic",
+      "ad_sort": "MediLogic",
       "cm_slspsn[1]": "10SP02",
       "cmh_year": 2013,
       "cmh_tot_sale": 98692,
@@ -38,7 +38,7 @@
       "cmh_tot_cost": 103102.97,
       "local_variables.local-var01": 23595589,
       "local_variables.local-var02": 99.6,
-      "cm_site": "10-100",
+      "cm_site": "10-600",
       "cm_region": "US-E",
       "cm_class": "DIST",
       "cm_type": "DIST",
@@ -54,7 +54,7 @@
     },
     {
       "cmh_cust": "10C1000",
-      "ad_mstr.ad_sort": "Houston Automotive",
+      "ad_sort": "Houston Automotive",
       "cm_slspsn[1]": "10SP01",
       "cmh_year": 2014,
       "cmh_tot_sale": 73224,
@@ -78,7 +78,7 @@
     },
     {
       "cmh_cust": "10C1000",
-      "ad_mstr.ad_sort": "Houston Automotive Group",
+      "ad_sort": "Houston Automotive Group",
       "cm_slspsn[1]": "10SP01",
       "cmh_year": 2015,
       "cmh_tot_sale": 33224,
@@ -86,7 +86,7 @@
       "cmh_tot_cost": 39914.36,
       "local_variables.local-var01": 13310,
       "local_variables.local-var02": 30.8,
-      "cm_site": "10-200",
+      "cm_site": "10-300",
       "cm_region": "US-S",
       "cm_class": "OEM",
       "cm_type": "OTH",

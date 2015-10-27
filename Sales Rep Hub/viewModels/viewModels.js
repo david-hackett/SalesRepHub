@@ -124,7 +124,7 @@
                 imageRequestString = urlBase + urlSizeParameter + "&" + urlQrParameter + "&" + urlDataParameter;
 
             return imageRequestString;
-        },
+        } ,
 
         appendCardFadeEffect: function ($cardFront, $cardBack) {
             var cardFrontButton = $cardFront.kendoMobileButton(),
@@ -143,7 +143,7 @@
                         $cardBack.fadeIn(500, "linear");
                     });
                 });
-        }
+        } 
 
     });
 
